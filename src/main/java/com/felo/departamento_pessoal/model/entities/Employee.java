@@ -8,6 +8,8 @@ import java.util.UUID;
 import com.felo.departamento_pessoal.model.enums.Status;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -24,6 +26,7 @@ public class Employee implements Serializable{
 	
 	private String name;
 	
+	@Enumerated(EnumType.STRING)
 	private Status status;
 	
 	private String cpf;
